@@ -1,0 +1,66 @@
+{
+  "checkpoint": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\outputs\\har_gpu_pretrain\\best_model.pt",
+  "data_dir": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\data\\har_hf\\val",
+  "image_count": 16,
+  "learned_ae": {
+    "codec": "Learned AE",
+    "setting": "checkpoint",
+    "mse": 0.004416079260408878,
+    "psnr": 23.55885362625122,
+    "ssim": 0.752821758389473,
+    "ms_ssim": 0.9197496622800827,
+    "bpp": 1.108917236328125,
+    "compression_ratio": 21.643463134765625
+  },
+  "similar_bpp_comparison": [
+    {
+      "codec": "Learned AE",
+      "setting": "checkpoint",
+      "mse": 0.004416079260408878,
+      "psnr": 23.55885362625122,
+      "ssim": 0.752821758389473,
+      "ms_ssim": 0.9197496622800827,
+      "bpp": 1.108917236328125,
+      "compression_ratio": 21.643463134765625
+    },
+    {
+      "codec": "JPEG",
+      "setting": "Q65",
+      "mse": 0.0002513776271371171,
+      "psnr": 36.0001106262207,
+      "ssim": 0.9663808345794678,
+      "ms_ssim": 0.9943676739931107,
+      "bpp": 1.0349044799804688,
+      "compression_ratio": 23.268430709838867
+    },
+    {
+      "codec": "JPEG2000",
+      "setting": "rate_24",
+      "mse": 0.000712599212420173,
+      "psnr": 31.533584117889404,
+      "ssim": 0.9168346673250198,
+      "ms_ssim": 0.9810599833726883,
+      "bpp": 0.9996414184570312,
+      "compression_ratio": 24.00861692428589
+    },
+    {
+      "codec": "WebP",
+      "setting": "Q80",
+      "mse": 0.00015435638488270342,
+      "psnr": 38.13101387023926,
+      "ssim": 0.9738636016845703,
+      "ms_ssim": 0.9951006323099136,
+      "bpp": 0.8867950439453125,
+      "compression_ratio": 27.206157684326172
+    }
+  ],
+  "outputs": {
+    "all_results_csv": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\outputs\\codec_comparison_dryrun\\codec_results.csv",
+    "all_results_markdown": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\outputs\\codec_comparison_dryrun\\codec_results.md",
+    "similar_bpp_markdown": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\outputs\\codec_comparison_dryrun\\similar_bpp_table.md",
+    "rd_psnr": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\outputs\\codec_comparison_dryrun\\rd_psnr_vs_bpp.png",
+    "rd_ssim": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\outputs\\codec_comparison_dryrun\\rd_ssim_vs_bpp.png",
+    "rd_ms_ssim": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\outputs\\codec_comparison_dryrun\\rd_ms_ssim_vs_bpp.png",
+    "visual_grid": "C:\\Users\\kashf\\Documents\\Codex\\2026-04-26\\you-are-an-expert-deep-learning\\outputs\\codec_comparison_dryrun\\visual_comparison_similar_bpp.png"
+  }
+}
