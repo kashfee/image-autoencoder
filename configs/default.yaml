@@ -1,0 +1,35 @@
+seed: 42
+
+model:
+  latent_channels: 16
+  base_channels: 64
+  norm: group
+  dropout: 0.05
+  bit_depth: 8
+  quant_clip: 2.0
+  soft_round_alpha: 8.0
+  importance_temperature: 0.08
+
+data:
+  image_size: 256
+  train_dir: data/train
+  val_dir:
+  val_split: 0.1
+  batch_size: 8
+  num_workers: 4
+  augment: true
+
+training:
+  epochs: 80
+  learning_rate: 0.0002
+  weight_decay: 0.000001
+  grad_clip_norm: 1.0
+  amp: true
+  output_dir: outputs
+  save_every: 5
+
+loss:
+  mse_weight: 1.0
+  ssim_weight: 0.1
+  ms_ssim_weight: 0.1
+  rd_lambda: 0.01

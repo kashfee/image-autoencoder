@@ -1,0 +1,36 @@
+seed: 43
+
+model:
+  latent_channels: 16
+  base_channels: 48
+  norm: group
+  dropout: 0.02
+  bit_depth: 8
+  quant_clip: 2.0
+  soft_round_alpha: 8.0
+  importance_temperature: 0.08
+
+data:
+  train_dir: data/har_hf/train
+  val_dir: data/har_hf/val
+  image_size: 256
+  batch_size: 8
+  num_workers: 0
+  augment: true
+
+training:
+  epochs: 2
+  learning_rate: 0.0001
+  weight_decay: 0.000001
+  grad_clip_norm: 1.0
+  amp: true
+  output_dir: outputs/har_gpu_finetune
+  save_every: 1
+  resume_from: outputs/har_gpu_pretrain/best_model.pt
+  resume_optimizer: false
+
+loss:
+  mse_weight: 1.0
+  ssim_weight: 0.05
+  ms_ssim_weight: 0.05
+  rd_lambda: 0.0005
