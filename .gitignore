@@ -10,7 +10,6 @@ venv/
 env/
 runs/
 data/
-*.pt
 *.pth
 *.ckpt
 *.log
