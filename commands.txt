@@ -1,0 +1,14 @@
+Encode image= 
+python scripts/compress_to_mongo.py `
+  --checkpoint outputs/har_gpu_finetune/best_model.pt `
+  --image inference_image\TEST.jpg `
+  --mongo-uri "mongodb+srv://kashfee:JatinJhatuBhosdiwala786@cluster0.ez0zvxv.mongodb.net/?appName=Cluster0" `
+  --image-id "test_image_1" `
+  --model-version "har_gpu_finetune_v1"
+
+Decompressd
+python scripts/reconstruct_from_mongo.py `
+  --checkpoint outputs/har_gpu_finetune/best_model.pt `
+  --mongo-uri "mongodb+srv://kashfee:JatinJhatuBhosdiwala786@cluster0.ez0zvxv.mongodb.net/?appName=Cluster0" `
+  --image-id "test_image_1" `
+  --output reconstructed_final.png
